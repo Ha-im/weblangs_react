@@ -74,11 +74,12 @@ import React, { Component } from 'react'
     }else if(mode === 'Create'){
       _main = <Create createForm={(title,desc,difficulty)=>{
           console.log(title,desc,difficulty);
-          this.state.max_id = this.state.max_id + 1;
-          let _menus = this.state.menus.concat({id:this.state.max_id,title:title,desc:desc,difficulty:difficulty});
+          let new_max_id = this.state.max_id + 1;
+          let _menus = this.state.menus.concat({id:new_max_id,title:title,desc:desc,difficulty:difficulty});
           this.setState({
             mode:'welcome',
-            menus:_menus
+            menus:_menus,
+            max_id:new_max_id
           })
       }}/>;
     }else if(mode === 'Modify'){
