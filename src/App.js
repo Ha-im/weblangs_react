@@ -155,7 +155,7 @@ import React, { Component } from 'react'
             selected_id:id
           });
         }}/>
-        {this. getArticles()}
+        {this.getArticles()}
         <hr/>
         <div className = 'd-flex justify-content-end'>
         <Button variant="primary" onClick={()=>{
